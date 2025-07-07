@@ -1,4 +1,3 @@
-// ...existing code...
 <template>
   <v-form>
     <v-container
@@ -30,23 +29,23 @@
               solo-inverted
               dense
               rounded
-              class="mb-4"
+              class="mb-0"
               style="text-align: center;"
             />
-            <div class="d-flex justify-center">
+            <div class="d-flex justify-center mb-3">
               <v-btn
                 color="primary"
                 @click="login"
               >
-                Login
+                Sign In
               </v-btn>
-
-                <v-btn
-                class="ml-5"
+            </div>
+            <div class="d-flex justify-center">
+              <v-btn
                 color="secondary"
-                @click="login"
+                @click="SignInWithGoogle"
               >
-                Sign in Using google
+                Sign in Using Google
               </v-btn>
             </div>
           </v-card>
@@ -58,6 +57,13 @@
 
 <script>
 export default {
-  layout: "auth",
+  layout: 'auth',
+  middleware: 'guest',
+  methods: {
+    SignInWithGoogle() {
+      this.$auth.loginWith('google')
+    }
+  }
 }
 </script>
+
