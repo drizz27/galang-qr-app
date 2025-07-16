@@ -22,7 +22,10 @@ export default {
 
   css: [],
 
-  plugins: [],
+  plugins: [
+    '~/plugins/html5-qrcode.js',
+  ],
+
 
   components: true,
 
