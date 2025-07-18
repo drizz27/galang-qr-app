@@ -9,7 +9,7 @@
           <div id="reader" style="width: 685px;"></div>
           <div v-if="qrResult" class="mt-4"> 
             <v-alert type="success" dense>
-              <h3>Laman ng QR Code:</h3> {{ qrResult }}
+              <h3>QR Result:</h3> {{ qrResult }}
             </v-alert>
           </div>
         </v-card-text>
